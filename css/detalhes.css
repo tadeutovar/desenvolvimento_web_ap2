@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #606470;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#athlete-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.athlete-detail {
+    width: 60%;
+    background-color: #F6F4F4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left; 
+    border-radius: 20px;  
+    display: grid;  
+    grid-template-columns: auto 1fr;  
+    max-width: 50%;
+}
+
+.athlete-detail .athlete-imagem {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-right: 20px; 
+}
+
+.athlete-detail img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+}
+
+.athlete-detail .athlete-infos {
+    display: flex;
+    flex-direction: column; 
+}
+
+.athlete-detail .athlete-infos p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.athlete-detail strong {
+    font-weight: bold;
+}

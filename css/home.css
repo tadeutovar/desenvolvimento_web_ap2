@@ -1,57 +1,105 @@
+/* Estilos para a página home */
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #393E46;
 }
 
-h1 {
-    color: #333;
+header {
+    background-color: #606470;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 90px;
+}
+
+.header-left p {
+    margin: 0;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 #logout-button {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #fff;
+    color: #606470;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 #logout-button:hover {
-    background-color: #0056b3;
+    background-color: #ddd;
+}
+
+.filter-buttons, .search-container {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .filter-button {
     margin: 10px 5px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #606470;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .filter-button:hover {
-    background-color: #0056b3;
+    background-color: #060707;
 }
 
 #search-input {
-    margin-bottom: 20px;
     padding: 10px;
     width: 100%;
     max-width: 300px;
     box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-#athletes-container {
+.filter-select {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: block;
+}
+
+.athletes-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
 }
 
 .athlete {
+    flex: 1 1 calc(16.66% - 40px); 
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    width: 150px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 12rem;
+    display: flex;
+    flex-direction: column; 
+    height: 30rem;
 }
 
 .athlete img {
@@ -59,4 +107,78 @@ h1 {
     height: auto;
     display: block;
     margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.details-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #606470;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.details-link:hover {
+    background-color: #060707;
+}
+
+
+@media (max-width: 768px) {
+    .athlete {
+        flex: 1 1 100%; 
+    }
+    
+    .filter-buttons {
+        display: none; 
+    }
+    
+    .search-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-container::before {
+        content: '';
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .search-container select {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    #search-input {
+        margin-top: 10px;
+    }
+
+    .filter-select {
+        margin-top: 2rem; 
+    }
+}
+
+@media (min-width: 769px) {
+    .athlete {
+        flex: 1 1 calc(25% - 40px); 
+    }
+
+    .filter-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-container select {
+        display: none;
+    }
+
+    .filter-select {
+        display: none; 
+    }
 }

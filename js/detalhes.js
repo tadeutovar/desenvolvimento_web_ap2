@@ -34,16 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayAthleteDetails(athlete) {
         athleteDetailsContainer.innerHTML = `
             <div class="athlete-detail">
+                <div class="athlete-imagem">
                 <img src="${athlete.imagem}" alt="${athlete.nome}">
-                <p><strong>Nome:</strong> ${athlete.nome}</p>
-                <p><strong>Elenco:</strong> ${athlete.elenco}</p>
-                <p><strong>Posição:</strong> ${athlete.posicao}</p>
-                <p><strong>Naturalidade:</strong> ${athlete.naturalidade}</p>
-                <p><strong>Data de Nascimento:</strong> ${athlete.nascimento}</p>
-                <p><strong>Altura:</strong> ${athlete.altura}</p>
-                <p><strong>Número de Jogos:</strong> ${athlete.n_jogos}</p>
-                <p><strong>No Botafogo Desde:</strong> ${athlete.no_botafogo_desde}</p>
-                <p><strong>Detalhes:</strong> ${athlete.detalhes}</p>
+                </div>
+                <div class="athlete-infos">
+                    <p><strong>Nome:</strong> ${athlete.nome}</p>
+                    <p><strong>Elenco:</strong> ${athlete.elenco}</p>
+                    <p><strong>Posição:</strong> ${athlete.posicao}</p>
+                    <p><strong>Naturalidade:</strong> ${athlete.naturalidade}</p>
+                    <p><strong>Data de Nascimento:</strong> ${athlete.nascimento}</p>
+                    <p><strong>Altura:</strong> ${athlete.altura}</p>
+                    <p><strong>Detalhes:</strong> ${athlete.detalhes}</p>
+                </div>
             </div>
         `;
     }

@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/geral.css">
 </head>
 <body>
-    <h1>Bem-vindo à Home Page</h1>
-    <p>Você está logado!</p>
-    <button id="logout-button">Logout</button>
-
-    <h2>Elenco de Atletas</h2>
-    <div>
-        <button class="filter-button" data-endpoint="all">Geral</button>
-        <button class="filter-button" data-endpoint="masculino">Masculino</button>
-        <button class="filter-button" data-endpoint="feminino">Feminino</button>
-    </div>
-    <input type="text" id="search-input" placeholder="Filtrar por nome">
-    <div id="athletes-container"></div>
-
+    <header>
+        <div class="header-left">
+            <p>Você está logado</p>
+        </div>
+        <div class="header-center">
+            <h1>Elenco de Atletas</h1>
+        </div>
+        <div class="header-right">
+            <button id="logout-button">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div class="filter-container">
+            <select id="filter-select" class="filter-select">
+                <option value="all">Geral</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            <div class="filter-buttons">
+                <button class="filter-button" data-endpoint="all">Geral</button>
+                <button class="filter-button" data-endpoint="masculino">Masculino</button>
+                <button class="filter-button" data-endpoint="feminino">Feminino</button>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar atleta">
+        </div>
+        <div id="athletes-container" class="athletes-container"></div>
+    </main>
     <script src="js/home.js"></script>
 </body>
 </html>
