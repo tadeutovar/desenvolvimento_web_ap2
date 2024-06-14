@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const storedPassword = localStorage.getItem('password');
 
     if (!storedPassword) {
-        // Se não houver senha armazenada, solicitar ao usuário para configurar uma senha
+        
         const newPassword = prompt('Configure uma nova senha:');
         if (newPassword) {
             const hashedPassword = CryptoJS.SHA256(newPassword).toString();

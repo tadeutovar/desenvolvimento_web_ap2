@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sessionToken = localStorage.getItem('sessionToken');
 
     if (sessionToken !== 'loggedIn') {
-        // Redirecionar para a página de login se não estiver logado
+        
         window.location.href = 'index.html';
     }
 
@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
     }
+
+    document.getElementById('back-to-home-button').addEventListener('click', function() {
+        window.location.href = 'home.html';
+    });
 
     fetchAthleteDetails();
 });
