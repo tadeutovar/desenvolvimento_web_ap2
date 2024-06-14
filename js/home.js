@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sessionToken = localStorage.getItem('sessionToken');
 
     if (sessionToken !== 'loggedIn') {
-        // Redirecionar para a página de login se não estiver logado
+        
         window.location.href = 'index.html';
     }
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput.addEventListener('input', filterAthletes);
 
-    // Adiciona event listener para os botões de filtro
+    
     document.querySelectorAll('.filter-button').forEach(button => {
         button.addEventListener('click', function() {
             const selectedEndpoint = button.getAttribute('data-endpoint');
@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Carregar inicialmente todos os atletas
+    const filterSelect = document.getElementById('filter-select');
+    filterSelect.addEventListener('change', function() {
+        const selectedEndpoint = filterSelect.value;
+        fetchAthletes(endpoints[selectedEndpoint]);
+    });
+    
+
+    
     fetchAthletes(endpoints.all);
 });

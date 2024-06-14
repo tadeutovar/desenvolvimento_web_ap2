@@ -164,6 +164,26 @@ header {
     }
 }
 
+@media (max-width: 560px) {
+    .header-left {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    header {
+        display: grid;
+        align-items: centeer;
+    }
+
+    .header-right {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+}
+
 @media (min-width: 769px) {
     .athlete {
         flex: 1 1 calc(25% - 40px); 
