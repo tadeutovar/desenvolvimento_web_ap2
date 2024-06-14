@@ -61,3 +61,39 @@ h1 {
 .athlete-detail strong {
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    #athlete-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .athlete-detail {
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .athlete-detail .athlete-imagem {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .athlete-detail img {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .athlete-detail .athlete-infos {
+        text-align: center;
+        align-items: center;
+    }
+
+    .athlete-detail .athlete-infos p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+}
